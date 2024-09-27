@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: subscriptionFlux:v1
+  datasource:
+    url: jdbc:mysql://localhost:3306/webhook-poc
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    show-sql: true
+
+logging:
+  level:
+    com.subscription.flux: DEBUG
